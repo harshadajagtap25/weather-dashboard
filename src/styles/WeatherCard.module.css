@@ -1,0 +1,141 @@
+.weatherCard {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.cityName {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 40px 0;
+}
+
+.tempData {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.temp {
+  font-size: 40px;
+}
+
+.tempDetails {
+  font-size: 13px;
+  text-align: right;
+}
+.singleDetail {
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sunDetails {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.iconTimeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .cityName {
+    margin: 20px 0;
+  }
+  .tempData {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10;
+  }
+
+  .tempDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .singleDetail {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    text-align: left;
+    padding: 10px 7px;
+    background-color: #ffdee9;
+    background-image: linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%);
+    color: #08aeea;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+  .text {
+    display: block;
+    margin-top: 5px;
+    font-size: 15px;
+  }
+
+  .iconTimeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 30%;
+    padding: 15px;
+    background-color: #ffdee9;
+    background-image: linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%);
+    color: #08aeea;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .iconTimeContainer div {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .iconTimeContainer div span {
+    display: block;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .iconTimeContainer svg {
+    font-size: 20px;
+  }
+  .divider {
+    display: none;
+  }
+}
