@@ -21,6 +21,7 @@ const SearchBar = () => {
       }
     } else {
       setError("Please search for city...");
+      setWeatherData(null);
 
       setTimeout(() => {
         setError(null);
@@ -46,16 +47,16 @@ const SearchBar = () => {
         <div
           className={`${styles.unit} ${
             unit === "metric" ? styles.selected : ""
-          }`}
-          onClick={() => setUnit("metric")}
+          } ${input === "" ? styles.disabled : ""}`}
+          onClick={() => input !== "" && setUnit("metric")}
         >
           °C
         </div>
         <div
           className={`${styles.unit} ${
             unit === "imperial" ? styles.selected : ""
-          }`}
-          onClick={() => setUnit("imperial")}
+          } ${input === "" ? styles.disabled : ""}`}
+          onClick={() => input !== "" && setUnit("imperial")}
         >
           °F
         </div>
