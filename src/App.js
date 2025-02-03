@@ -11,6 +11,7 @@ const AppContent = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      console.log("here ..")
       setError(null);
       setWeatherData(null);
       if (city !== "") {
@@ -22,6 +23,9 @@ const AppContent = () => {
           setError(error.message);
           setWeatherData(null);
         }
+      } else {
+        console.log("came here");
+        setWeatherData(null);
       }
     };
 
