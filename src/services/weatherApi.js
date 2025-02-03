@@ -15,19 +15,3 @@ export const fetchWeather = async (city, unit) => {
     throw error;
   }
 };
-
-export const fetchLongitudeLatitide = async (city) => {
-  try {
-    let api = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`;
-
-    const response = await fetch(api);
-    const json = await response.json();
-
-    if (!response.ok) {
-      throw new Error("City not found");
-    }
-    return [json[0]["lat"], json[0]["lon"]];
-  } catch (error) {
-    throw error;
-  }
-};
